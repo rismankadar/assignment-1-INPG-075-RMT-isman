@@ -44,81 +44,81 @@
         <div class="row text-center">
           <div class="col-md-4 fs-1 text-end"><i class="bi bi-person-circle"></i></div>
           <div class="col-md-4 text-start">
-            <div class="row fw-bold">Kadarisman</div>
-            <div class="row text-muted">Web Developer</div>
+            <div class="row fw-bold" id="nameDisplay">Kadarisman</div>
+            <div class="row text-muted" id="roleDisplay">Web Developer</div>
             <div class="row my-2">
-              <div class="col-6 px-0 g-1"><button type="button" class="btn btn-outline-primary p-1">Kontak</button> <button type="button" class="btn btn-outline-secondary p-1">Resume</button></div>
+              <div class="col-6 px-0 g-1">
+                <button id="editButton" type="button" class="btn btn-outline-primary p-1">Edit</button>
+                <button type="button" id="resetForm" class="btn btn-outline-secondary p-1">Reset</button>
+              </div>
             </div>
           </div>
           <div class="col-md-4 text-start">
-            <table>
+            <table id="biodataTable">
               <tr>
-                <td class="fw-bold">Availabilty</td>
-                <td>: Web Developers</td>
+                <td class="fw-bold">Availability</td>
+                <td>: <span id="availabilityDisplay">Web Developer</span></td>
               </tr>
               <tr>
                 <td class="fw-bold">Usia</td>
-                <td>: 28 </td>
+                <td>: <span id="usiaDisplay">28</span></td>
               </tr>
               <tr>
                 <td class="fw-bold">Lokasi</td>
-                <td>: Purwokerto</td>
-              </tr class="fw-bold">
+                <td>: <span id="lokasiDisplay">Purwokerto</span></td>
+              </tr>
               <tr>
                 <td class="fw-bold">Pengalaman</td>
-                <td>: Ci4 & Laravel </td>
+                <td>: <span id="experienceDisplay">Ci4 & Laravel</span></td>
               </tr>
               <tr>
                 <td class="fw-bold">Email</td>
-                <td>: kadarismanfisika@gmail.com</td>
+                <td>: <span id="emailDisplay">kadarismanfisika@gmail.com</span></td>
               </tr>
             </table>
           </div>
         </div>
 
-        <div class="containner">
-
-            <form method="post" action="">
-                  <div class="mb-3">
-                    <label for="nama" class="form-label text-capitalize">Nama</label>
-                    <input type="text" class="form-control" id="nama" >
-                  </div>
-               
-                  <div class="mb-3">
-                    <label for="role" class="form-label text-capitalize">Role</label>
-                    <input type="text" class="form-control" id="role" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="availabilty" class="form-label">Availabilty</label>
-                    <input type="text" class="form-control" id="availabilty" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="usia" class="form-label text-capitalize">Usia</label>
-                    <input type="text" class="form-control" id="usia" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="lokasi" class="form-label text-capitalize">lokasi</label>
-                    <input type="text" class="form-control" id="lokasi" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="experience" class="form-label text-capitalize">experience</label>
-                    <input type="text" class="form-control" id="experience" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="email" class="form-label text-capitalize">email</label>
-                    <input type="email" class="form-control" id="email" required>
-                  </div>
-               
-                  <button type="submit" class="btn btn-success col-12">Submit</button>
-                </form>
+        <div class="container mt-3">
+          <form id="editForm" method="post" action="" style="display: none">
+            <div class="mb-3">
+              <label for="nama" class="form-label text-capitalize">Nama</label>
+              <input type="text" class="form-control" id="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="role" class="form-label text-capitalize">Role</label>
+              <input type="text" class="form-control" id="role" required />
+            </div>
+            <div class="mb-3">
+              <label for="availability" class="form-label">Availability</label>
+              <input type="text" class="form-control" id="availability" required />
+            </div>
+            <div class="mb-3">
+              <label for="usia" class="form-label text-capitalize">Usia</label>
+              <input type="number" min="1" class="form-control" id="usia" required />
+            </div>
+            <div class="mb-3">
+              <label for="lokasi" class="form-label text-capitalize">Lokasi</label>
+              <input type="text" class="form-control" id="lokasi" required />
+            </div>
+            <div class="mb-3">
+              <label for="experience" class="form-label text-capitalize">Experience</label>
+              <input type="text" class="form-control" id="experience" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label text-capitalize">Email</label>
+              <input type="email" class="form-control" id="email" required />
+            </div>
+            <button type="submit" class="btn btn-success col-12">Submit</button>
+            <button type="button" id="resetButton" class="btn btn-secondary col-12 mt-2">Reset</button>
+          </form>
         </div>
       </div>
-
-
     </main>
     <footer class="py-3 my-4 bg-light shadow sticky-bottom">
       <p class="text-center text-body-secondary">©isman 2024</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/js/js.js"></script>
   </body>
 </html>

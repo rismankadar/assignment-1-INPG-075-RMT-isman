@@ -1,4 +1,4 @@
 .bg-gradient-custom {
   background: rgb(219, 135, 9) !important;
-  background: linear-gradient(180deg, rgba(219, 135, 9, 1) 38%, rgba(255, 223, 7, 1) 100%) !important;
+  background: linear-gradient(180deg, rgb(151, 94, 8) 38%, rgb(172, 169, 149) 100%) !important;
 }
